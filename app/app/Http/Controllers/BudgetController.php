@@ -28,7 +28,9 @@ class BudgetController extends Controller
         // 支出詳細
         // return view('original.spending.show');
         // 支出編集
-        return view('original.spending.edit');
+        // return view('original.spending.edit');
+        // プロフィール
+        return view('original.profile.index');
     }
 
     /**
