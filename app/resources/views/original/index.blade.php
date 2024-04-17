@@ -59,6 +59,46 @@
                         <button class="btn btn-info text-white btn-responsive">詳細</button>
                     </td>
                 </tr>
+                <tr class="card-body bg-white gallery">
+                    <td class="text-center align-middle w-25">a</td>
+                    <td class="text-center align-middle w-25">a</td>
+                    <td class="text-center align-middle w-25">a</td>
+                    <td class="text-center align-middle w-25">
+                        <button class="btn btn-info text-white btn-responsive">詳細</button>
+                    </td>
+                </tr>
+                <tr class="card-body bg-white gallery">
+                    <td class="text-center align-middle w-25">a</td>
+                    <td class="text-center align-middle w-25">a</td>
+                    <td class="text-center align-middle w-25">a</td>
+                    <td class="text-center align-middle w-25">
+                        <button class="btn btn-info text-white btn-responsive">詳細</button>
+                    </td>
+                </tr>
+                <tr class="card-body bg-white gallery">
+                    <td class="text-center align-middle w-25">a</td>
+                    <td class="text-center align-middle w-25">a</td>
+                    <td class="text-center align-middle w-25">a</td>
+                    <td class="text-center align-middle w-25">
+                        <button class="btn btn-info text-white btn-responsive">詳細</button>
+                    </td>
+                </tr>
+                <tr class="card-body bg-white gallery">
+                    <td class="text-center align-middle w-25">a</td>
+                    <td class="text-center align-middle w-25">a</td>
+                    <td class="text-center align-middle w-25">a</td>
+                    <td class="text-center align-middle w-25">
+                        <button class="btn btn-info text-white btn-responsive">詳細</button>
+                    </td>
+                </tr>
+                <tr class="card-body bg-white gallery">
+                    <td class="text-center align-middle w-25">a</td>
+                    <td class="text-center align-middle w-25">a</td>
+                    <td class="text-center align-middle w-25">a</td>
+                    <td class="text-center align-middle w-25">
+                        <button class="btn btn-info text-white btn-responsive">詳細</button>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </section>

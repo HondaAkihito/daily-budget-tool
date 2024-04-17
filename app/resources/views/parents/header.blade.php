@@ -1,5 +1,5 @@
 <!-- ヘッダー -->
-<header class="bg-dark mb-3">
+<header class="bg-dark mb-3 sticky-top">
     <div class="container">
         <nav class="navbar navbar-dark">
             <span class="navbar-brand mb-0 h1">Daily Budget Tool</span>
