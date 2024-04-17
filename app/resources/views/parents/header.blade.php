@@ -9,7 +9,7 @@
                 <button class="btn btn-success">支出登録</button>
                 <div class="profile-picture profile-picture-header">
                     <!-- img-fluid：画像を中心にやってくれる(Bootstrap) -->
-                    <img class="img-fluid" src="/assets/sample.jpg" alt="Profile Picture">
+                    <img class="img-fluid cursor_pointer" src="/assets/sample.jpg" alt="Profile Picture">
                 </div>
             </div>
         </nav>

@@ -17,7 +17,6 @@
   height: 100px;
   border-radius: 50%;
   overflow: hidden;
-  cursor: pointer;  
 
   // ヘッダーアイコン
   &.profile-picture-header {
@@ -30,6 +29,16 @@
    &.profile-picture-border {
     border: solid 1px black;
    }
+}
+
+// ----- カーソルポインター -----
+.cursor_pointer {
+  cursor: pointer;
+}
+
+// ファイルアップロードにカーソル追加
+input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
+  cursor: pointer;
 }
 
 // ----- カレンダー -----

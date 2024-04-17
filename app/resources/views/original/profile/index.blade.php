@@ -5,7 +5,7 @@
 
     <h2 class="mt-5 text-center">プロフィール</h2>
     <div class="profile-picture mt-5 mx-auto">
-        <img class="img-fluid" src="/assets/sample.jpg" alt="Profile Picture">
+        <img class="img-fluid cursor_pointer" src="/assets/sample.jpg" alt="Profile Picture">
     </div>
     <div class="mb-5 mt-2 text-center">
         <button type="submit" class="btn btn-success">編集</button>
