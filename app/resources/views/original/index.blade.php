@@ -13,7 +13,7 @@
                     <th scope="col" class="text-center w-25">予算</th>
                     <th scope="col" class="text-center w-25">残り予算</th>
                     <th scope="col" class="text-center w-25">残り日数</th>
-                    <th scope="col" class="text-center w-25">期日までの1日予算</th>
+                    <th scope="col" class="text-center w-25">1日の予算</th>
                 </tr>
             </thead>
             <tbody>

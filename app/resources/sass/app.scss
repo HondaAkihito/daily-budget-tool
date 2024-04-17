@@ -10,7 +10,52 @@
 // オリジナルcss
 
 // ---------- 共通 ----------
-// ----- アイコン -----
+// -----
+$body_btn_font-size: 0.7rem;
+// -----
+
+// ----- body
+body {
+  @media screen and (max-width: 430px) {
+    font-size: $body_btn_font-size;
+  }
+}
+
+// ----- 文字サイズ
+h2 {
+  @media screen and (max-width: 430px) {
+    font-size: 1.3rem;
+  }
+}
+
+// ----- container
+.container {
+  @media screen and (max-width: 430px) {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+// ----- ヘッダー、トップページ
+// navbar+containerとcontainerのみの箇所がある。その差分でヘッダーとコンテンツの横幅のずれを解消。
+.navbar {
+  padding: 0.5rem 0rem;
+}
+
+// ----- ボタン
+.btn {
+  @media screen and (max-width: 430px) {
+    padding: 0.2rem 0.3rem;
+    font-size: $body_btn_font-size;
+  }
+}
+
+// ----- カーソルポインター -----
+.cursor_pointer {
+  cursor: pointer;
+}
+
+// ----- アイコン 
 // プロフィールアイコン
 .profile-picture {
   width: 100px;
@@ -24,21 +69,15 @@
     height: 40px;
     vertical-align: middle;
     display: inline-block;
-   }
-
-   &.profile-picture-border {
+    @media screen and (max-width: 430px) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  
+  &.profile-picture-border {
     border: solid 1px black;
-   }
-}
-
-// ----- カーソルポインター -----
-.cursor_pointer {
-  cursor: pointer;
-}
-
-// ファイルアップロードにカーソル追加
-input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
-  cursor: pointer;
+  }
 }
 
 // ----- カレンダー -----
@@ -67,8 +106,27 @@ input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
   border: 1px solid #ced4da;
 }
 
+// ----- テーブル
+.table th, .table td {
+  @media screen and (max-width: 430px) {
+    padding: 0.5rem;
+  }
+}
+
+// ---------- 共通 ----------
+
+
 // ---------- 個別 ----------
-// ----- 予算表示 -----
+
+// ----- ヘッダー
+// ヘッダータイトル
+.navbar-brand {
+  @media screen and (max-width: 430px) {
+    font-size: 0.8rem;
+  }
+}
+
+// ----- 予算表示
 // カード全体の影
 .shadow {
   box-shadow: 0 0 3px gray;
@@ -79,12 +137,19 @@ input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
   background: #AFDFE4;
 }
 
+// ----- 支出検索
 // 一覧検索のボタン
 .search-btn {
   padding: 0.1rem 0.75rem;
   vertical-align: revert;
   // ----- レスポンシブ対応 -----
-  @media screen and (max-width: 414px) {
-    padding: 0.2rem 0.85rem;
+  @media screen and (max-width: 430px) {
+    padding: 0.08rem 0.5rem;
   }
+}
+
+// ----- 画像編集
+// ファイルアップロードにカーソル追加
+input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
+  cursor: pointer;
 }

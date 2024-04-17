@@ -1,5 +1,5 @@
 <!-- ヘッダー -->
-<div class="container-fluid bg-dark mb-3 sticky-top">
+<header class="bg-dark mb-3">
     <div class="container">
         <nav class="navbar navbar-dark">
             <span class="navbar-brand mb-0 h1">Daily Budget Tool</span>
@@ -14,5 +14,5 @@
             </div>
         </nav>
     </div>
-</div>
+</header>
 <!-- ヘッダー -->
