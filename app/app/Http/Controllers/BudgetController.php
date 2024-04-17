@@ -18,7 +18,10 @@ class BudgetController extends Controller
      */
     public function index()
     {
-        return view('original.index');
+        // 本命
+        // return view('original.index');
+        
+        return view('original.budget.create');
     }
 
     /**
