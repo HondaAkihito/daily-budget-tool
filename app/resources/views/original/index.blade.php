@@ -5,15 +5,15 @@
 <div class="container">
 
     <!-- 予算表示 -->
-    <h2 class="mt-5 text-center">○○の予算</h2>
+    <h2 class="mt-5 text-center">○○の予算(○月○日まで)</h2>
     <section class="navbar">
-        <table class="table border">
+        <table class="table border shadow">
             <thead>
-                <tr class="card-header">
-                    <th scope="col" class="text-center w-25">期日</th>
+                <tr class="card-header card-header-bg">
                     <th scope="col" class="text-center w-25">予算</th>
                     <th scope="col" class="text-center w-25">残り予算</th>
-                    <th scope="col" class="text-center w-25">○日までに1日で使える予算</th>
+                    <th scope="col" class="text-center w-25">残り日数</th>
+                    <th scope="col" class="text-center w-25">期日までの1日予算</th>
                 </tr>
             </thead>
             <tbody>
