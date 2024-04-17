@@ -21,7 +21,10 @@ class BudgetController extends Controller
         // 本命
         // return view('original.index');
         
-        return view('original.budget.create');
+        // 予算登録
+        // return view('original.budget.create');
+        // 支出登録
+        return view('original.spending.create');
     }
 
     /**
