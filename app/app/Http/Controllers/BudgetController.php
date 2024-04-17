@@ -22,9 +22,9 @@ class BudgetController extends Controller
         // return view('original.index');
         
         // 予算登録
-        return view('original.budget.create');
+        // return view('original.budget.create');
         // 支出登録
-        // return view('original.spending.create');
+        return view('original.spending.create');
         // 支出詳細
         // return view('original.spending.show');
         // 支出編集
