@@ -36,4 +36,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // Userモデルとの紐付け
+    public function budget() {
+        return $this->hasMany('App\Budget');
+    }
+    public function spending() {
+        return $this->hasMany('App\Spending');
+    }
 }
