@@ -1,3 +1,6 @@
+@extends('parents.layout')
+@section('content')
+
 <!-- メイン全体 -->
 <div class="container">
 
@@ -60,3 +63,5 @@
         </table>
     </section>
 </div>
+
+@endsection
