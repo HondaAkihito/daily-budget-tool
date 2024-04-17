@@ -6,3 +6,24 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// オリジナルcss
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;  
+
+  // ヘッダーアイコン
+  &.profile-picture-header {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    display: inline-block;
+   }
+
+   &.profile-picture-border {
+    border: solid 1px black;
+   }
+}
