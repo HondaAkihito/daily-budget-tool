@@ -18,7 +18,7 @@
             <input type="date" id="date" class="date_border form-control">
         </div>
         <div class="mt-4">
-            <button type="submit" class="btn btn-primary">登録</button>
+            <button type="submit" class="btn btn-primary">予算を登録</button>
         </div>
     </form>
 </section>

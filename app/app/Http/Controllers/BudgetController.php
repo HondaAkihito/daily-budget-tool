@@ -19,10 +19,10 @@ class BudgetController extends Controller
     public function index()
     {
         // 本命
-        return view('original.index');
+        // return view('original.index');
         
         // 予算登録
-        // return view('original.budget.create');
+        return view('original.budget.create');
         // 支出登録
         // return view('original.spending.create');
         // 支出詳細
