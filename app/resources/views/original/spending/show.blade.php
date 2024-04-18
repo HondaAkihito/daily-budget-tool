@@ -4,11 +4,6 @@
 <section class="container">
     <h2 class="mt-5 text-center">支出詳細</h2>
     <form class="mt-5 date_option">
-        @csrf
-        <div class="form-group d-flex border-bottom">
-            <label for="date" class="col-form-label w-25">日付</label>
-            <input type="date" id="date" class="form-control-plaintext" value="2022-08-03" disabled readonly>
-        </div>
         <div class="form-group d-flex border-bottom">
             <label for="title" class="col-form-label w-25">タイトル</label>
             <input type="text" class="form-control-plaintext" id="title" value="aaa" disabled readonly>

@@ -7,12 +7,15 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+
 // オリジナルcss
 
 // ---------- 共通 ----------
 // -----
 $body_btn_font-size: 0.7rem;
 $margin_5: 2rem;
+$inherit: inherit;
+$pointer: pointer;
 // -----
 
 // ----- body
@@ -66,7 +69,7 @@ h2 {
 
 // ----- カーソルポインター -----
 .cursor_pointer {
-  cursor: pointer;
+  cursor: $pointer;
 }
 
 // ----- アイコン 
@@ -101,17 +104,14 @@ h2 {
 // ----- フォーム
 .form-control {
   @media screen and (max-width: 430px) {
-    font-size: 0.7rem;
+    font-size: $inherit;
   }
 }
 
-// ラベル
-.form-group
-  label {
-    @media screen and (max-width: 430px) {
-      margin-bottom: 0.3rem;
-    }
-  }
+// 記入なしフォーム
+.form-control-plaintext {
+  font-size: $inherit;
+}
 
 // ----- カレンダー -----
 // カレンダーの処理(独自オプション)
@@ -184,5 +184,5 @@ h2 {
 // ----- 画像編集
 // ファイルアップロードにカーソル追加
 input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
-  cursor: pointer;
+  cursor: $pointer;
 }

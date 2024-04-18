@@ -12,11 +12,11 @@
     </div>
 
     <div class="form-group d-flex border-bottom">
-        <label for="name" class="col-form-label w-25">名前</label>
+        <label for="name" class="col-form-label w-50">名前</label>
         <input type="text" class="form-control-plaintext" id="name" value="名前です" disabled readonly>
     </div>
     <div class="form-group d-flex border-bottom">
-        <label for="email" class="col-form-label w-25">メールアドレス</label>
+        <label for="email" class="col-form-label w-50">メールアドレス</label>
         <input type="text" class="form-control-plaintext" id="email" value="a@a.a" disabled readonly>
     </div>
 
