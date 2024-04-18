@@ -18,6 +18,8 @@ use App\Http\Controllers\ProfileController;
 //     return view('welcome');
 // });
 
-// Auth::routes();
+Auth::routes();
 
-Route::resource('/', 'BudgetController');
+Route::group(['middleware' => 'auth'], function() {
+  Route::resource('/', 'BudgetController');
+});

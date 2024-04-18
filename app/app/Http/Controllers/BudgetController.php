@@ -19,7 +19,7 @@ class BudgetController extends Controller
     public function index()
     {
         // 本命
-        return view('original.index');
+        // return view('original.index');
         
         // 予算登録
         // return view('original.budget.create');
@@ -30,7 +30,7 @@ class BudgetController extends Controller
         // 支出編集
         // return view('original.spending.edit');
         // プロフィール
-        // return view('original.profile.index');
+        return view('original.profile.index');
         // プロフィール画像編集
         // return view('original.profile.edit');
     }

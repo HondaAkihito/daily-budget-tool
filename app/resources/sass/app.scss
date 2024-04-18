@@ -16,6 +16,7 @@ $body_btn_font-size: 0.7rem;
 $margin_5: 2rem;
 $inherit: inherit;
 $pointer: pointer;
+$inline-block: inline-block;
 // -----
 
 // ----- body
@@ -193,6 +194,12 @@ h2 {
   @media screen and (max-width: 430px) {
     padding: 0.08rem 0.5rem;
   }
+}
+
+// ----- マイページ
+// リセット、ログアウト
+.inline-block {
+  display: $inline-block;
 }
 
 // ----- 画像編集

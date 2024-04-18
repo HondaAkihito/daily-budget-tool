@@ -13,19 +13,26 @@
 
     <div class="form-group d-flex border-bottom">
         <label for="name" class="col-form-label w-50">名前</label>
-        <input type="text" class="form-control-plaintext" id="name" value="名前です" disabled readonly>
+        <input type="text" class="form-control-plaintext" id="name" value="名前です" disabled readonly autocomplete="off">
     </div>
     <div class="form-group d-flex border-bottom">
         <label for="email" class="col-form-label w-50">メールアドレス</label>
-        <input type="text" class="form-control-plaintext" id="email" value="a@a.a" disabled readonly>
+        <input type="text" class="form-control-plaintext" id="email" value="a@a.a" disabled readonly autocomplete="off">
     </div>
 
-    <!-- オールリセット --><!-- ログアウト -->
-    <form>
+    <!-- オールリセット -->
+    <form class="inline-block">
         @csrf
         <button type="submit" class="btn btn-danger mt-4">予算/支出をリセット</button>
-        <button class="btn btn-dark mt-4 ml-3">ログアウト</button>
     </form>
+    
+    <!-- ログアウト -->
+    @if(Auth::check())
+        <form class="inline-block" id="logout-form" action="{{ route('logout')}}" method="POST">
+            @csrf
+            <button type="submit" class="btn btn-dark mt-4 ml-3">ログアウト</button>
+        </form>
+    @endif
 
 </section>
 
