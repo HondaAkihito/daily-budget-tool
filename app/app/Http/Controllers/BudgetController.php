@@ -26,13 +26,13 @@ class BudgetController extends Controller
         // 支出登録
         // return view('original.spending.create');
         // 支出詳細
-        return view('original.spending.show');
+        // return view('original.spending.show');
         // 支出編集
         // return view('original.spending.edit');
         // プロフィール
-        return view('original.profile.index');
+        // return view('original.profile.index');
         // プロフィール画像編集
-        // return view('original.profile.edit');
+        return view('original.profile.edit');
     }
 
     /**

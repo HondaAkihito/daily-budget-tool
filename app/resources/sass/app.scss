@@ -79,6 +79,11 @@ h2 {
   height: 100px;
   border-radius: 50%;
   overflow: hidden;
+  // アイコンを円形にリサイズして配置
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   @media screen and (max-width: 430px) {
     width: 75px;
     height: 75px;
@@ -89,7 +94,7 @@ h2 {
     width: 40px;
     height: 40px;
     vertical-align: middle;
-    display: inline-block;
+    // display: inline-block;
     @media screen and (max-width: 430px) {
       width: 30px;
       height: 30px;
@@ -99,6 +104,23 @@ h2 {
   &.profile-picture-border {
     border: solid 1px black;
   }
+
+  img {
+    // アイコンを円形にリサイズして配置
+    object-fit: cover;
+  }
+}
+
+// ヘッダータイトル
+.navbar-brand {
+  @media screen and (max-width: 430px) {
+    font-size: 0.8rem;
+  }
+}
+
+// ヘッダーの右側
+.header-right {
+  display: flex;
 }
 
 // ----- フォーム
@@ -150,14 +172,6 @@ h2 {
 
 
 // ---------- 個別 ----------
-
-// ----- ヘッダー
-// ヘッダータイトル
-.navbar-brand {
-  @media screen and (max-width: 430px) {
-    font-size: 0.8rem;
-  }
-}
 
 // ----- 予算表示
 // カード全体の影
