@@ -3,7 +3,7 @@
 
   <div class="container">
     <h2 class="mt-5 text-center">新規登録</h2>
-    <form action="{{ route('register') }}" method="POST">
+    <form class="mt-5" action="{{ route('register') }}" method="POST">
       @csrf
       <div class="form-group">
         <label for="email">メールアドレス</label>
@@ -24,7 +24,7 @@
       <div>
         <button type="submit" class="btn btn-primary">新規登録する</button>
       </div>
-      <small id="emailHelp" class="form-text text-muted text-right"><a href="#">※ログインへ戻る</a></small>
+      <small class="form-text text-muted text-right"><a href="{{ route('login') }}">※ログインへ戻る</a></small>
     </form>
   </div>
 

@@ -54,6 +54,14 @@ h2 {
   }
 }
 
+// ----- sp時のみ表示
+.sp {
+  display: none;
+  @media screen and (max-width: 430px) {
+    display: block;
+  }
+}
+
 // ----- ヘッダー、トップページ
 // navbar+containerとcontainerのみの箇所がある。その差分でヘッダーとコンテンツの横幅のずれを解消。
 .navbar {
@@ -122,6 +130,9 @@ h2 {
 // ヘッダーの右側
 .header-right {
   display: flex;
+  @media screen and (max-width: 430px) {
+    display: none;
+  }
 }
 
 // ----- フォーム

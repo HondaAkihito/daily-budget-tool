@@ -1,5 +1,4 @@
-@extends('layouts.app')
-
+@extends('parents.layout')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -39,6 +38,7 @@
                             </div>
                         </div>
                     </form>
+                    <small class="form-text text-muted text-right mt-3"><a href="{{ route('login') }}">※ログインへ戻る</a></small>
                 </div>
             </div>
         </div>

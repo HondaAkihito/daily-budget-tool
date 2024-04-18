@@ -3,7 +3,7 @@
 
   <div class="container">
     <h2 class="mt-5 text-center">ログイン</h2>
-    <form action="{{ route('login') }}" method="POST">
+    <form class="mt-5" action="{{ route('login') }}" method="POST">
       @csrf
       <div class="form-group">
         <label for="email">メールアドレス</label>

@@ -188,6 +188,13 @@ return [
     |
     */
 
+    // authを日本語化
+    'timezone' => 'Asia/Tokyo',     // タイムゾーン
+    'locale' => 'ja',               // 第一言語を日本語（ローカライゼーション）
+    'fallback_locale' => 'en',      // 該当言語が見つからない場合の言語
+    'faker_locale' => 'ja_JP',
+    
+
     'aliases' => [
 
         'App' => Illuminate\Support\Facades\App::class,
