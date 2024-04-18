@@ -12,12 +12,26 @@
 // ---------- 共通 ----------
 // -----
 $body_btn_font-size: 0.7rem;
+$margin_5: 2rem;
 // -----
 
 // ----- body
 body {
   @media screen and (max-width: 430px) {
     font-size: $body_btn_font-size;
+  }
+}
+
+// ----- margin
+.mb-5 {
+  @media screen and (max-width: 430px) {
+    margin-bottom: $margin_5;
+  }
+}
+
+.mt-5 {
+  @media screen and (max-width: 430px) {
+    margin-top: $margin_5;
   }
 }
 
@@ -62,6 +76,10 @@ h2 {
   height: 100px;
   border-radius: 50%;
   overflow: hidden;
+  @media screen and (max-width: 430px) {
+    width: 75px;
+    height: 75px;
+  }
 
   // ヘッダーアイコン
   &.profile-picture-header {
