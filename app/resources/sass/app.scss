@@ -87,6 +87,14 @@ h2 {
   }
 }
 
+// ラベル
+.form-group
+  label {
+    @media screen and (max-width: 430px) {
+      margin-bottom: 0.3rem;
+    }
+  }
+
 // ----- カレンダー -----
 // カレンダーの処理(独自オプション)
 .date_option {
