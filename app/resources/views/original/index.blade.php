@@ -5,7 +5,12 @@
 <div class="container">
 
     <!-- 予算表示 -->
-    <h2 class="mt-5 text-center">{{ $budget['title'] }} ({{ $budget['date'] }}まで)</h2>
+    <h2 class="mt-5 text-center">
+        @if(Auth::user()->budget()->exists())
+            {{ $budget['title'] }} ({{ $budget['date'] }}まで)
+        @else 予算の表示 
+        @endif
+    </h2>
     <section class="navbar">
         <table class="table border shadow">
             <thead>
@@ -18,17 +23,25 @@
             </thead>
             <tbody>
                 <tr class="card-body bg-white">
-                    <td class="text-center w-25">{{ $budget['amount'] }}円</td>
-                    <td class="text-center w-25">ccc</td>
-                    <td class="text-center w-25">{{ $diff_in_day }}日</td>
-                    <td class="text-center w-25">ddd</td>
+                    @if(Auth::user()->budget()->exists())
+                        <td class="text-center w-25">{{ $budget['amount'] }}円</td>
+                        <td class="text-center w-25">{{ $budget['rest_amount'] }}円</td>
+                        <td class="text-center w-25">{{ $budget['rest_day'] }}日</td>
+                        <td class="text-center w-25">{{ $budget['day_amount'] }}円</td>
+                    @endif
                 </tr>
             </tbody>
         </table>
     </section>
 
     <!-- 検索 -->
-    <h2 class="mt-5 text-center">{{ $budget['title'] }}の支出</h2>
+
+    <h2 class="mt-5 text-center">
+        @if(Auth::user()->budget()->exists())
+            {{ $budget['title'] }}の支出
+        @else 支出一覧の表示
+        @endif
+    </h2>
     <section class="navbar justify-content-around">
         <form class="date_option" action="" method="GET">
             @csrf
