@@ -11,6 +11,7 @@
                 <div class="header-right pc_tab">
                     <a class="btn btn-success ml-1 d-flex align-items-center" href="{{ route('index') }}">予算</a>
                     <a class="btn btn-success ml-1 d-flex align-items-center" href="{{ route('create_budget.create') }}">予算登録</a>
+                    <a class="btn btn-success ml-1 d-flex align-items-center" href="{{ route('create_spending.create') }}">支出登録</a>
                     <button class="btn btn-success ml-1">支出登録</button>
                     <div class="profile-picture profile-picture-header ml-1">
                         <!-- img-fluid：画像を中心にやってくれる(Bootstrap) -->

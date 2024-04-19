@@ -22,6 +22,10 @@ use App\Http\Controllers\ProfileController;
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function() {
+  // トップページ
   Route::resource('/', 'TopController');
+  // 予算登録
   Route::resource('/create_budget', 'BudgetController');
+  // 支出登録
+  Route::resource('/create_spending', 'SpendingController');
 });

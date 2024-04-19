@@ -18,12 +18,7 @@ class SpendingController extends Controller
      */
     public function index()
     {
-        // if(Auth::user()->spending()->exists()) {
-            $spendings = Auth::user()->spending()->get();
-            return view('original.index', [
-                'spendings' => $spendings,
-            ]);
-        // }
+
     }
 
     /**
@@ -33,7 +28,7 @@ class SpendingController extends Controller
      */
     public function create()
     {
-        //
+        return view('original.spending.create');
     }
 
     /**
@@ -44,7 +39,17 @@ class SpendingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $spending = new Spending;
+        
+        // RequestからのPOST値は、
+        // Requestインスタンス($request)->POSTのnameで取得
+        $spending->amount = $request->amount;
+        $spending->date = $request->date;
+        $spending->title = $request->title;
+        
+        Auth::user()->spending()->save($spending);
+        
+        return redirect('/');
     }
 
     /**
