@@ -9,8 +9,8 @@
                 <!-- なし -->
             @else
                 <div class="header-right pc_tab">
-                    <button class="btn btn-success" ><a href="{{ route('index') }}">予算</a></button>
-                    <button class="btn btn-success ml-1">予算登録</button>
+                    <button class="btn btn-success" >予算</button>
+                    <a class="btn btn-success ml-1 d-flex align-items-center" href="{{ route('create_budget.create') }}">予算登録</a>
                     <button class="btn btn-success ml-1">支出登録</button>
                     <div class="profile-picture profile-picture-header ml-1">
                         <!-- img-fluid：画像を中心にやってくれる(Bootstrap) -->
@@ -18,7 +18,6 @@
                     </div>
                 </div>
             @endguest
-
 
             <!-- sp時のハンバーガーメニュー -->
             @guest

@@ -1,4 +1,5 @@
 <?php
+use App\Http\Controllers\TopController;
 use App\Http\Controllers\BudgetController;
 use App\Http\Controllers\SpendingController;
 use App\Http\Controllers\ProfileController;
@@ -22,5 +23,5 @@ Auth::routes();
 
 Route::group(['middleware' => 'auth'], function() {
   Route::resource('/', 'TopController');
-  // Route::resource('/', 'SpendingController');
+  Route::resource('/create_budget', 'BudgetController');
 });
