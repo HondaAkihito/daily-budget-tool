@@ -24,10 +24,10 @@
             <tbody>
                 <tr class="card-body bg-white">
                     @if(Auth::user()->budget()->exists())
-                        <td class="text-center w-25">{{ $budget['amount'] }}円</td>
-                        <td class="text-center w-25">{{ $budget['rest_amount'] }}円</td>
+                        <td class="text-center w-25">{{ number_format($budget['amount']) }}円</td>
+                        <td class="text-center w-25">{{ number_format($budget['rest_amount']) }}円</td>
                         <td class="text-center w-25">{{ $budget['rest_day'] }}日</td>
-                        <td class="text-center w-25">{{ $budget['day_amount'] }}円</td>
+                        <td class="text-center w-25">{{ number_format($budget['day_amount']) }}円</td>
                     @endif
                 </tr>
             </tbody>
