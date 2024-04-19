@@ -21,5 +21,6 @@ use App\Http\Controllers\ProfileController;
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function() {
-  Route::resource('/', 'BudgetController');
+  Route::resource('/', 'TopController');
+  // Route::resource('/', 'SpendingController');
 });

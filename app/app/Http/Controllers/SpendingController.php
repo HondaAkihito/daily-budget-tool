@@ -18,7 +18,12 @@ class SpendingController extends Controller
      */
     public function index()
     {
-        //
+        // if(Auth::user()->spending()->exists()) {
+            $spendings = Auth::user()->spending()->get();
+            return view('original.index', [
+                'spendings' => $spendings,
+            ]);
+        // }
     }
 
     /**

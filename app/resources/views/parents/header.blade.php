@@ -9,7 +9,7 @@
                 <!-- なし -->
             @else
                 <div class="header-right pc_tab">
-                    <button class="btn btn-success">予算</button>
+                    <button class="btn btn-success" ><a href="{{ route('index') }}">予算</a></button>
                     <button class="btn btn-success ml-1">予算登録</button>
                     <button class="btn btn-success ml-1">支出登録</button>
                     <div class="profile-picture profile-picture-header ml-1">

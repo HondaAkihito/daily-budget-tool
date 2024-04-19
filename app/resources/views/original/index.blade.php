@@ -21,16 +21,16 @@
                     <th scope="col" class="text-center w-25">1日の予算</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr class="card-body bg-white">
-                    @if(Auth::user()->budget()->exists())
+            @if(Auth::user()->budget()->exists())
+                <tbody>
+                    <tr class="card-body bg-white">
                         <td class="text-center w-25">{{ number_format($budget['amount']) }}円</td>
                         <td class="text-center w-25">{{ number_format($budget['rest_amount']) }}円</td>
                         <td class="text-center w-25">{{ $budget['rest_day'] }}日</td>
                         <td class="text-center w-25">{{ number_format($budget['day_amount']) }}円</td>
-                    @endif
-                </tr>
-            </tbody>
+                    </tr>
+                </tbody>
+            @endif
         </table>
     </section>
 
@@ -63,56 +63,20 @@
                     <th scope="col" class="text-center align-middle w-25"></th>
                 </tr>
             </thead>
-            <tbody id="gallery">
-                <tr class="card-body bg-white gallery">
-                    <td class="text-center align-middle w-25">a</td>
-                    <td class="text-center align-middle w-25">a</td>
-                    <td class="text-center align-middle w-25">a</td>
-                    <td class="text-center align-middle w-25">
-                        <button class="btn btn-info text-white btn-responsive">詳細</button>
-                    </td>
-                </tr>
-                <tr class="card-body bg-white gallery">
-                    <td class="text-center align-middle w-25">a</td>
-                    <td class="text-center align-middle w-25">a</td>
-                    <td class="text-center align-middle w-25">a</td>
-                    <td class="text-center align-middle w-25">
-                        <button class="btn btn-info text-white btn-responsive">詳細</button>
-                    </td>
-                </tr>
-                <tr class="card-body bg-white gallery">
-                    <td class="text-center align-middle w-25">a</td>
-                    <td class="text-center align-middle w-25">a</td>
-                    <td class="text-center align-middle w-25">a</td>
-                    <td class="text-center align-middle w-25">
-                        <button class="btn btn-info text-white btn-responsive">詳細</button>
-                    </td>
-                </tr>
-                <tr class="card-body bg-white gallery">
-                    <td class="text-center align-middle w-25">a</td>
-                    <td class="text-center align-middle w-25">a</td>
-                    <td class="text-center align-middle w-25">a</td>
-                    <td class="text-center align-middle w-25">
-                        <button class="btn btn-info text-white btn-responsive">詳細</button>
-                    </td>
-                </tr>
-                <tr class="card-body bg-white gallery">
-                    <td class="text-center align-middle w-25">a</td>
-                    <td class="text-center align-middle w-25">a</td>
-                    <td class="text-center align-middle w-25">a</td>
-                    <td class="text-center align-middle w-25">
-                        <button class="btn btn-info text-white btn-responsive">詳細</button>
-                    </td>
-                </tr>
-                <tr class="card-body bg-white gallery">
-                    <td class="text-center align-middle w-25">a</td>
-                    <td class="text-center align-middle w-25">a</td>
-                    <td class="text-center align-middle w-25">a</td>
-                    <td class="text-center align-middle w-25">
-                        <button class="btn btn-info text-white btn-responsive">詳細</button>
-                    </td>
-                </tr>
-            </tbody>
+            @if(Auth::user()->budget()->exists())
+                <tbody id="gallery">
+                @foreach ($spendings as $spending)
+                    <tr class="card-body bg-white gallery">
+                        <td class="text-center align-middle w-25">{{ $spending['date'] }}</td>
+                        <td class="text-center align-middle w-25">{{ number_format($spending['amount']) }}円</td>
+                        <td class="text-center align-middle w-25">{{ $spending['title'] }}</td>
+                        <td class="text-center align-middle w-25">
+                            <button class="btn btn-info text-white btn-responsive">詳細</button>
+                        </td>
+                    </tr>
+                @endforeach
+                </tbody>
+            @endif
         </table>
     </section>
 </div>
