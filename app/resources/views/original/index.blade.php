@@ -5,7 +5,7 @@
 <div class="container">
 
     <!-- 予算表示 -->
-    <h2 class="mt-5 text-center">○○の予算(○月○日まで)</h2>
+    <h2 class="mt-5 text-center">{{ $budget['title'] }} ({{ $budget['date'] }}まで)</h2>
     <section class="navbar">
         <table class="table border shadow">
             <thead>
@@ -18,9 +18,9 @@
             </thead>
             <tbody>
                 <tr class="card-body bg-white">
-                    <td class="text-center w-25">aaa</td>
-                    <td class="text-center w-25">bbb</td>
+                    <td class="text-center w-25">{{ $budget['amount'] }}円</td>
                     <td class="text-center w-25">ccc</td>
+                    <td class="text-center w-25">{{ $diff_in_day }}日</td>
                     <td class="text-center w-25">ddd</td>
                 </tr>
             </tbody>
@@ -28,7 +28,7 @@
     </section>
 
     <!-- 検索 -->
-    <h2 class="mt-5 text-center">○○の支出</h2>
+    <h2 class="mt-5 text-center">{{ $budget['title'] }}の支出</h2>
     <section class="navbar justify-content-around">
         <form class="date_option" action="" method="GET">
             @csrf

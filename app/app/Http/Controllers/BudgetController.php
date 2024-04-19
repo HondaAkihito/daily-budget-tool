@@ -18,6 +18,23 @@ class BudgetController extends Controller
      */
     public function index()
     {
+        // ----- 予算の1件取得 -----
+        $budget = Auth::user()->budget()->orderBy('created_at', 'ASC')->orderBy('id', 'ASC')->first();
+
+        // ----- 残り日数取得 -----
+        // ①ログインユーザーの予算テーブルのdateカラムを取得(登録期日を取得)
+        $date = Auth::user()->budget()->orderBy('created_at', 'ASC')->orderBy('id', 'ASC')->value('date');
+        // ②本日の日付を取得 = Carbon::today() 
+        // ③(①-②)を実行 = diffInDaysで差分を取得 = 残り日数
+        $diff_in_day = Carbon::today()->diffInDays(Carbon::parse($date));
+        
+        // ----- リターン -----
+        return view('original.index', [
+            'budget' => $budget,
+            'diff_in_day' => $diff_in_day,
+        ]);
+
+
         // 本命
         // return view('original.index');
         
@@ -30,7 +47,7 @@ class BudgetController extends Controller
         // 支出編集
         // return view('original.spending.edit');
         // プロフィール
-        return view('original.profile.index');
+        // return view('original.profile.index');
         // プロフィール画像編集
         // return view('original.profile.edit');
     }
