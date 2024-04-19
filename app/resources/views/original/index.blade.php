@@ -71,7 +71,7 @@
                         <td class="text-center align-middle w-25">{{ number_format($spending['amount']) }}円</td>
                         <td class="text-center align-middle w-25">{{ $spending['title'] }}</td>
                         <td class="text-center align-middle w-25">
-                            <button class="btn btn-info text-white btn-responsive">詳細</button>
+                            <a href="{{ route('spending.show', ['spending' => $spending['id']]) }}" class="btn btn-info text-white btn-responsive">詳細</a>
                         </td>
                     </tr>
                 @endforeach

@@ -58,9 +58,15 @@ class SpendingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(int $id)
     {
-        //
+        $spending = new Spending;
+
+        $spending = Auth::user()->spending()->find($id);
+
+        return view('original.spending.show', [
+            'spending' => $spending,
+        ]);
     }
 
     /**
@@ -71,7 +77,6 @@ class SpendingController extends Controller
      */
     public function edit($id)
     {
-        //
     }
 
     /**

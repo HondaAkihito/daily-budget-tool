@@ -25,7 +25,7 @@ Route::group(['middleware' => 'auth'], function() {
   // トップページ
   Route::resource('/', 'TopController');
   // 予算登録
-  Route::resource('/create_budget', 'BudgetController');
-  // 支出登録
-  Route::resource('/create_spending', 'SpendingController');
+  Route::resource('/budget', 'BudgetController');
+  // 支出登録、支出詳細
+  Route::resource('/spending', 'SpendingController');
 });
