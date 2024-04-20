@@ -3,7 +3,7 @@
 
 <section class="container">
     <h2 class="mt-5 text-center">支出詳細</h2>
-    <form class="mt-5 date_option">
+    <!-- <form class="mt-5 date_option"> -->
         <div class="form-group d-flex border-bottom">
             <label for="title" class="col-form-label w-25">日付</label>
             <input type="date" class="form-control-plaintext" id="date" value="{{ $spending['date'] }}" disabled readonly>
@@ -16,11 +16,17 @@
             <label for="title" class="col-form-label w-25">タイトル</label>
             <input type="text" class="form-control-plaintext" id="title" value="{{ $spending['title'] }}" disabled readonly>
         </div>
-        <div class="mt-4">
-            <button type="submit" class="btn btn-success">編集</button>
+    <!-- </form> -->
+    <div class="mt-4 d-flex">
+        <a type="submit" class="btn btn-success">編集</a>
+        <form action="{{ route('spending.destroy', ['spending' => $spending['id']]) }}" method="post">
+            @csrf
+            <!-- HTMLフォームはGET or POSTのみが許可されている。
+            だから↓フォームのDELETEリクエストを使う場合は、擬似的に使う方法をとる↓。 -->
+            @method('DELETE')
             <button type="submit" class="btn btn-danger ml-5">削除</button>
-        </div>
-    </form>
+        </form>
+    </div>
 </section>
 
 @endsection

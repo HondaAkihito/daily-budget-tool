@@ -60,8 +60,6 @@ class SpendingController extends Controller
      */
     public function show(int $id)
     {
-        $spending = new Spending;
-
         $spending = Auth::user()->spending()->find($id);
 
         return view('original.spending.show', [
@@ -99,6 +97,13 @@ class SpendingController extends Controller
      */
     public function destroy($id)
     {
-        //
+
+        // $record = Auth::user()->spending()->find($id);
+        $record = Auth::user()->spending()->find($id);
+        $record->delete();
+
+
+        return redirect('/');
+        // return view('original.budget.create');
     }
 }
