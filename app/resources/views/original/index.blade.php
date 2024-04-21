@@ -58,8 +58,8 @@
             <thead>
                 <tr class="card-header">
                     <th scope="col" class="text-center align-middle w-25">日付</th>
+                    <th scope="col" class="text-center align-middle w-25">タイトル</th>
                     <th scope="col" class="text-center align-middle w-25">支出</th>
-                    <th scope="col" class="text-center align-middle w-25">メモ</th>
                     <th scope="col" class="text-center align-middle w-25"></th>
                 </tr>
             </thead>
@@ -68,8 +68,8 @@
                 @foreach ($spendings as $spending)
                     <tr class="card-body bg-white gallery">
                         <td class="text-center align-middle w-25">{{ $spending['date'] }}</td>
-                        <td class="text-center align-middle w-25">{{ number_format($spending['amount']) }}円</td>
                         <td class="text-center align-middle w-25">{{ $spending['title'] }}</td>
+                        <td class="text-center align-middle w-25">{{ number_format($spending['amount']) }}円</td>
                         <td class="text-center align-middle w-25">
                             <a href="{{ route('spending.show', ['spending' => $spending['id']]) }}" class="btn btn-info text-white btn-responsive">詳細</a>
                         </td>

@@ -9,13 +9,13 @@
             <input type="date" class="form-control-plaintext" id="date" value="{{ $spending['date'] }}" disabled readonly>
         </div>
         <div class="form-group d-flex border-bottom">
+            <label for="title" class="col-form-label w-25">タイトル</label>
+            <input type="text" class="form-control-plaintext" id="title" value="{{ $spending['title'] }}" disabled readonly>
+        </div>
+        <div class="form-group d-flex border-bottom">
             <label for="amount" class="col-form-label w-25">支出金額</label>
             <!-- 小数点(number_format)のためにinputではなくdivタグ使用 -->
             <div class="form-control-plaintext">{{number_format($spending['amount'])}}円</div>
-        </div>
-        <div class="form-group d-flex border-bottom">
-            <label for="title" class="col-form-label w-25">タイトル</label>
-            <input type="text" class="form-control-plaintext" id="title" value="{{ $spending['title'] }}" disabled readonly>
         </div>
     <!-- </form> -->
     <div class="mt-4 d-flex">
