@@ -12,7 +12,6 @@
                     <a class="btn btn-success ml-1 d-flex align-items-center" href="{{ route('index') }}">予算</a>
                     <a class="btn btn-success ml-1 d-flex align-items-center" href="{{ route('budget.create') }}">予算登録</a>
                     <a class="btn btn-success ml-1 d-flex align-items-center" href="{{ route('spending.create') }}">支出登録</a>
-                    <button class="btn btn-success ml-1">支出登録</button>
                     <div class="profile-picture profile-picture-header ml-1">
                         <!-- img-fluid：画像を中心にやってくれる(Bootstrap) -->
                         <img class="img-fluid cursor_pointer" src="/assets/sample.jpg" alt="Profile Picture">
@@ -33,13 +32,13 @@
                     <ul class="navbar-nav ml-auto">
                         <div class="d-flex ml-auto mt-2">
                             <li class="nav-item dropdown">
-                                <button class="btn btn-success">予算</button>
+                                <a class="btn btn-success" href="{{ route('index') }}">予算</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <button class="btn btn-success ml-1">予算登録</button>
+                                <a class="btn btn-success ml-1" href="{{ route('budget.create') }}">予算登録</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <button class="btn btn-success ml-1">支出登録</button>
+                                <a class="btn btn-success ml-1" href="{{ route('spending.create') }}">支出登録</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <div class="profile-picture profile-picture-header ml-1">
