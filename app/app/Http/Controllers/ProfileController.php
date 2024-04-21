@@ -18,7 +18,11 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        //
+        $user = Auth::user();
+        
+        return view('original.profile.index', [
+            'user' => $user,
+        ]);
     }
 
     /**

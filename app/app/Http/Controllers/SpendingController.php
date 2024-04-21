@@ -18,7 +18,6 @@ class SpendingController extends Controller
      */
     public function index()
     {
-
     }
 
     /**

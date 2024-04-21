@@ -13,8 +13,10 @@
                     <a class="btn btn-success ml-1 d-flex align-items-center" href="{{ route('budget.create') }}">予算登録</a>
                     <a class="btn btn-success ml-1 d-flex align-items-center" href="{{ route('spending.create') }}">支出登録</a>
                     <div class="profile-picture profile-picture-header ml-1">
-                        <!-- img-fluid：画像を中心にやってくれる(Bootstrap) -->
-                        <img class="img-fluid cursor_pointer" src="/assets/sample.jpg" alt="Profile Picture">
+                        <a href="{{ route('profile.index') }}">
+                            <!-- img-fluid：画像を中心にやってくれる(Bootstrap) -->
+                            <img class="img-fluid cursor_pointer img_opacity" src="/assets/sample.jpg" alt="Profile Picture">
+                        </a>
                     </div>
                 </div>
             @endguest
@@ -42,7 +44,9 @@
                             </li>
                             <li class="nav-item dropdown">
                                 <div class="profile-picture profile-picture-header ml-1">
-                                    <img class="img-fluid cursor_pointer" src="/assets/sample.jpg" alt="Profile Picture">
+                                    <a href="{{ route('profile.index') }}">
+                                        <img class="img-fluid cursor_pointer" src="/assets/sample.jpg" alt="Profile Picture">
+                                    </a>
                                 </div>
                             </li>
                         </div>
