@@ -10,7 +10,8 @@
         </div>
         <div class="form-group d-flex border-bottom">
             <label for="amount" class="col-form-label w-25">支出金額</label>
-            <input type="number" class="form-control-plaintext" id="amount" value="{{ $spending['amount'] }}" disabled readonly>
+            <!-- 小数点(number_format)のためにinputではなくdivタグ使用 -->
+            <div class="form-control-plaintext">{{number_format($spending['amount'])}}円</div>
         </div>
         <div class="form-group d-flex border-bottom">
             <label for="title" class="col-form-label w-25">タイトル</label>
@@ -18,7 +19,7 @@
         </div>
     <!-- </form> -->
     <div class="mt-4 d-flex">
-        <a type="submit" class="btn btn-success">編集</a>
+        <a href="{{ route('spending.edit', ['spending' => $spending['id']]) }}" class="btn btn-success">編集</a>
         <form action="{{ route('spending.destroy', ['spending' => $spending['id']]) }}" method="post">
             @csrf
             <!-- HTMLフォームはGET or POSTのみが許可されている。

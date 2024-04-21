@@ -73,8 +73,13 @@ class SpendingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(int $id)
     {
+        $spending = Auth::user()->spending()->find($id);
+
+        return view('original.spending.edit', [
+            'spending' => $spending,
+        ]);
     }
 
     /**
@@ -84,9 +89,17 @@ class SpendingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, int $id)
     {
-        //
+        $record = Auth::user()->spending()->find($id);
+
+        $record->amount = $request->amount;
+        $record->date = $request->date;
+        $record->title = $request->title;
+        
+        Auth::user()->spending()->save($record);
+
+        return redirect()->route('spending.show', ['spending' =>  $id]);
     }
 
     /**
@@ -104,6 +117,5 @@ class SpendingController extends Controller
 
 
         return redirect('/');
-        // return view('original.budget.create');
     }
 }

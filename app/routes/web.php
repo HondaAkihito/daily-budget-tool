@@ -26,6 +26,6 @@ Route::group(['middleware' => 'auth'], function() {
   Route::resource('/', 'TopController');
   // 予算登録
   Route::resource('/budget', 'BudgetController');
-  // 支出登録、支出詳細、支出削除
+  // 支出登録、支出詳細、支出削除、支出編集
   Route::resource('/spending', 'SpendingController');
 });
