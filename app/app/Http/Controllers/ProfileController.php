@@ -84,14 +84,9 @@ class ProfileController extends Controller
         // $file_name = request()->file('file')->getClientOriginalName(); でも可
         // getClientOriginalName = 拡張子を含め、アップロードしたファイルのファイル名を取得
         $file_name = $request->file('file')->getClientOriginalName();
-    
         $request->file->storeAs('public', $file_name);
     
-        // $user = User::find(1);
-        $id = Auth::id(); 
-        $user = User::find($id);
-
-    
+        $user = Auth::user();
         $user->update(['file_path' => '/storage/'.$file_name]);
     
         return view('original.profile.index', [
