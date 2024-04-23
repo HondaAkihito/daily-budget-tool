@@ -4,8 +4,8 @@
 <section class="container">
     <h2 class="mt-5 text-center">支出編集</h2>
     <form action="{{ route('spending.update', ['spending' => $spending['id']]) }}" method="post" class="mt-5 date_option">
-        @csrf
-        @method('PATCH')
+    @csrf
+    @method('PATCH')
         <div class="form-group">
             <label for="date">日付</label>
             <input type="date" id="date" name="date" value="{{ $spending['date'] }}" class="date_border form-control">

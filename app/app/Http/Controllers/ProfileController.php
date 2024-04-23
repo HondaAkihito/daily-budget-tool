@@ -43,7 +43,6 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //
     }
 
     /**
@@ -63,11 +62,16 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(int $id)
     {
-        //
-    }
+        // 編集ページへ
+        $user = Auth::user();
 
+        return view('original.profile.edit', [
+            'user' => $user,
+        ]);
+    }
+    
     /**
      * Update the specified resource in storage.
      *
@@ -77,7 +81,22 @@ class ProfileController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // $file_name = request()->file('file')->getClientOriginalName(); でも可
+        // getClientOriginalName = 拡張子を含め、アップロードしたファイルのファイル名を取得
+        $file_name = $request->file('file')->getClientOriginalName();
+    
+        $request->file->storeAs('public', $file_name);
+    
+        // $user = User::find(1);
+        $id = Auth::id(); 
+        $user = User::find($id);
+
+    
+        $user->update(['file_path' => '/storage/'.$file_name]);
+    
+        return view('original.profile.index', [
+            'user' => $user,
+        ]);
     }
 
     /**

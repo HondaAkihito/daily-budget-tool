@@ -15,7 +15,8 @@
                     <div class="profile-picture profile-picture-header ml-1">
                         <a href="{{ route('profile.index') }}">
                             <!-- img-fluid：画像を中心にやってくれる(Bootstrap) -->
-                            <img class="img-fluid cursor_pointer img_opacity" src="/assets/sample.jpg" alt="Profile Picture">
+                            <!-- {{ $icon }} = 共通ヘッダーの画像 = ComposerServiceProvider -->
+                            <img class="img-fluid cursor_pointer img_opacity" src="{{$icon}}" alt="Profile Picture">
                         </a>
                     </div>
                 </div>

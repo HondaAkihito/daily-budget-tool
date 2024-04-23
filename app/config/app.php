@@ -175,6 +175,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // 共通ヘッダー画像
+        App\Providers\ComposerServiceProvider::class,
+
     ],
 
     /*
