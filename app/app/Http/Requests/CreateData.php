@@ -27,7 +27,7 @@ class CreateData extends FormRequest
             'amount' => 'required|integer|max:11',
             'title' => 'required|max:20',
             'date' => 'required|date',
-            'file' => 'file|image|mimes:jpeg,jpg,png,webp,tiff,svg',
+            'file' => 'required|file|image|mimes:jpeg,jpg,png,webp,tiff,svg',
         ];
     }
 }

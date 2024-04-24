@@ -9,6 +9,10 @@
         @method('PATCH')
             <label for="id">↓ファイルを選択してください↓</label><br>
             <input type="file" id="input" name="file" class="cursor_pointer">
+            <!-- バリデーション個別表示 -->
+            @error('file')
+                <div class="text-danger"><span>{{ $message }}</span></div>
+            @enderror
             <div class="profile-picture profile-picture-border mt-3">
                 <img id="sample" class="img-fluid">
             </div>
