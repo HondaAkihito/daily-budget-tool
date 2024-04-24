@@ -8,6 +8,7 @@ use App\Spending;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
+use App\Http\Requests\CreateData;
 
 class ProfileController extends Controller
 {
@@ -79,7 +80,7 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CreateData $request, $id)
     {
         // $file_name = request()->file('file')->getClientOriginalName(); でも可
         // getClientOriginalName = 拡張子を含め、アップロードしたファイルのファイル名を取得

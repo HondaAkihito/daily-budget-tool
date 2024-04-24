@@ -8,6 +8,7 @@ use App\Spending;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
+use App\Http\Requests\CreateData;
 
 class BudgetController extends Controller
 {
@@ -37,7 +38,7 @@ class BudgetController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateData $request)
     {
         $budget = new Budget;
         

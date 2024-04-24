@@ -8,6 +8,7 @@ use App\Spending;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
+use App\Http\Requests\CreateData;
 
 class TopController extends Controller
 {

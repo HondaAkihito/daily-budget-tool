@@ -8,6 +8,7 @@ use App\Spending;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
+use App\Http\Requests\CreateData;
 
 class SpendingController extends Controller
 {
@@ -36,7 +37,7 @@ class SpendingController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateData $request)
     {
         $spending = new Spending;
         
@@ -88,7 +89,7 @@ class SpendingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, int $id)
+    public function update(CreateData $request, int $id)
     {
         $record = Auth::user()->spending()->find($id);
 
