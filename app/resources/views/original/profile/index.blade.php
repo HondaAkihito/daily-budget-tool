@@ -26,7 +26,7 @@
     <form class="inline-block" action="{{ route('profile.destroy', ['profile' => $user['id']])}}" method="POST">
         @csrf
         @method('DELETE')
-        <button type="submit" class="btn btn-danger mt-4">予算/支出をリセット</button>
+        <button type="submit" class="btn btn-danger mt-4" onclick="return confirm('予算/支出内容を全てリセットしても良いですか？');">予算/支出をリセット</button>
     </form>
     
     <!-- ログアウト -->

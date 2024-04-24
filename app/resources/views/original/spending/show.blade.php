@@ -25,7 +25,7 @@
             <!-- HTMLフォームはGET or POSTのみが許可されている。
             だから↓フォームのDELETEリクエストを使う場合は、擬似的に使う方法をとる↓。 -->
             @method('DELETE')
-            <button type="submit" class="btn btn-danger ml-5">削除</button>
+            <button type="submit" class="btn btn-danger ml-5" onclick="return confirm('支出内容を削除しても良いですか？');">削除</button>
         </form>
     </div>
 </section>
