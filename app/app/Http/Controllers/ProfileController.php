@@ -89,9 +89,8 @@ class ProfileController extends Controller
         $user = Auth::user();
         $user->update(['file_path' => '/storage/'.$file_name]);
     
-        return view('original.profile.index', [
-            'user' => $user,
-        ]);
+        // route('profile.index')で$user = Auth::user();をやっているから、ここでデータを送らなくても取得してくれる
+        return redirect()->route('profile.index')->with('status', 'プロフィール画像の更新');
     }
 
     /**
@@ -104,6 +103,6 @@ class ProfileController extends Controller
     {
         Auth::user()->budget()->delete();
         Auth::user()->spending()->delete();
-        return view('original.index');
+        return redirect('/')->with('status', '予算/支出のリセット');
     }
 }

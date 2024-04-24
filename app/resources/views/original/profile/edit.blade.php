@@ -12,7 +12,7 @@
             <div class="profile-picture profile-picture-border mt-3">
                 <img id="sample" class="img-fluid">
             </div>
-            <button type="submit" class="btn btn-danger">アップロード</button>
+            <button type="submit" class="btn btn-danger mt-3">アップロード</button>
         </form>
     </div>
 </section>

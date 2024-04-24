@@ -3,6 +3,9 @@
 
 <section class="container">
 
+    <!-- フラッシュメッセージ -->
+    @include('parents.status')
+
     <h2 class="mt-5 text-center">プロフィール</h2>
     <div class="profile-picture mt-5 mx-auto">
         <!-- img-fluid：画像を中心にやってくれる(Bootstrap) -->

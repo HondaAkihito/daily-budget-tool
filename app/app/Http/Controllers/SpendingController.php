@@ -48,7 +48,7 @@ class SpendingController extends Controller
         
         Auth::user()->spending()->save($spending);
         
-        return redirect('/');
+        return redirect('/')->with('status', '支出の登録');
     }
 
     /**
@@ -98,7 +98,8 @@ class SpendingController extends Controller
         
         Auth::user()->spending()->save($record);
 
-        return redirect()->route('spending.show', ['spending' =>  $id]);
+        // with = フラッシュメッセージも
+        return redirect()->route('spending.show', ['spending' =>  $id])->with('status', '支出の更新');
     }
 
     /**
@@ -114,7 +115,7 @@ class SpendingController extends Controller
         $record = Auth::user()->spending()->find($id);
         $record->delete();
 
-
-        return redirect('/');
+        // フラッシュメッセージ
+        return redirect('/')->with('status', '支出の削除');
     }
 }

@@ -4,6 +4,9 @@
 <!-- メイン全体 -->
 <div class="container">
 
+    <!-- フラッシュメッセージ -->
+    @include('parents.status')
+
     <!-- 予算表示 -->
     <h2 class="mt-5 text-center">
         @if(Auth::user()->budget()->exists())

@@ -2,6 +2,9 @@
 @section('content')
 
 <section class="container">
+    <!-- フラッシュメッセージ -->
+    @include('parents.status')
+    
     <h2 class="mt-5 text-center">支出詳細</h2>
     <!-- <form class="mt-5 date_option"> -->
         <div class="form-group d-flex border-bottom">

@@ -49,7 +49,8 @@ class BudgetController extends Controller
         
         Auth::user()->spending()->save($budget);
         
-        return redirect('/');
+        // フラッシュメッセージ
+        return redirect('/')->with('status', '予算の登録');
     }
 
     /**
