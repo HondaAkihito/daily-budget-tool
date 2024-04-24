@@ -46,7 +46,7 @@
                             <li class="nav-item dropdown">
                                 <div class="profile-picture profile-picture-header ml-1">
                                     <a href="{{ route('profile.index') }}">
-                                        <img class="img-fluid cursor_pointer" src="/assets/sample.jpg" alt="Profile Picture">
+                                        <img class="img-fluid cursor_pointer" src="{{$icon}}" alt="Profile Picture">
                                     </a>
                                 </div>
                             </li>
