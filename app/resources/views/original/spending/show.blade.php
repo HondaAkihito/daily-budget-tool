@@ -15,7 +15,9 @@
         <div class="form-group d-flex border-bottom">
             <label for="amount" class="col-form-label w-25">支出金額</label>
             <!-- 小数点(number_format)のためにinputではなくdivタグ使用 -->
-            <div class="form-control-plaintext">{{number_format($spending['amount'])}}円</div>
+            <!-- number_formatのためにdivタグで表示 -->
+            <input type="number" class="form-control-plaintext" id="amount" disabled readonly hidden>
+            <div class="form-control-plaintext" id="amount">{{number_format($spending['amount'])}}円</div>
         </div>
     <!-- </form> -->
     <div class="mt-4 d-flex">
