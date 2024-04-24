@@ -24,7 +24,7 @@ class CreateData extends FormRequest
     public function rules()
     {
         return [
-            'amount' => 'required|integer|max:11',
+            'amount' => 'required|integer|max:99999999999',
             'title' => 'required|max:20',
             'date' => 'required|date',
             'file' => 'required|file|image|mimes:jpeg,jpg,png,webp,tiff,svg',
