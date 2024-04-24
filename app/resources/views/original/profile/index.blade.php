@@ -8,7 +8,7 @@
         <!-- img-fluid：画像を中心にやってくれる(Bootstrap) -->
         <!-- {{ $icon }} = 共通ヘッダーの画像 = ComposerServiceProvider -->
         <img class="img-fluid cursor_pointer" src="{{ $icon }}" alt="Profile Picture">
-        </div>
+    </div>
     <div class="mb-5 mt-2 text-center">
         <a href="{{ route('profile.edit', ['profile' => $user['id']]) }}" class="btn btn-success">編集</a>
     </div>
@@ -23,8 +23,9 @@
     </div>
 
     <!-- オールリセット -->
-    <form class="inline-block">
+    <form class="inline-block" action="{{ route('profile.destroy', ['profile' => $user['id']])}}" method="POST">
         @csrf
+        @method('DELETE')
         <button type="submit" class="btn btn-danger mt-4">予算/支出をリセット</button>
     </form>
     

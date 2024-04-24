@@ -43,7 +43,7 @@
         @endif
     </h2>
     <section class="navbar justify-content-around">
-        <form class="date_option" action="{{ route('search.index') }}" method="get">
+        <form class="date_option" action="{{ route('search.index') }}" method="GET">
             @csrf
             <input type="date" name="from" placeholder="from_date" class="cursor date_border" @if(isset($from)) value="{{$from}}" @endif>
                 <span class="mx-1 text-grey">~</span>

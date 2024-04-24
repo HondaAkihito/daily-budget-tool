@@ -3,6 +3,7 @@ use App\Http\Controllers\TopController;
 use App\Http\Controllers\BudgetController;
 use App\Http\Controllers\SpendingController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,4 +31,6 @@ Route::group(['middleware' => 'auth'], function() {
   Route::resource('/spending', 'SpendingController');
   // マイページ
   Route::resource('/profile', 'ProfileController');
+  // 検索
+  Route::resource('/search', 'SearchController');
 });

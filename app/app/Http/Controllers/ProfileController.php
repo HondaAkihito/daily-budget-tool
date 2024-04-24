@@ -102,6 +102,8 @@ class ProfileController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Auth::user()->budget()->delete();
+        Auth::user()->spending()->delete();
+        return view('original.index');
     }
 }
