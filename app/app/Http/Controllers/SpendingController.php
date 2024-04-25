@@ -58,9 +58,12 @@ class SpendingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(int $id)
+    // public function show(int $id)
+    public function show(Spending $spending)
     {
-        $spending = Auth::user()->spending()->find($id);
+        // ルートモデルバインディングのため削除
+        // user所持か否かはポリシークラスで判別
+        // $spending = Auth::user()->spending()->find($id);
 
         // URLでユーザーが所持しないidを入力された時に表示
         if(is_null($spending)) {
@@ -78,9 +81,9 @@ class SpendingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(int $id)
+    public function edit(Spending $spending)
     {
-        $spending = Auth::user()->spending()->find($id);
+        // $spending = Auth::user()->spending()->find($id);
 
         // URLでユーザーが所持しないidを入力された時に表示
         if(is_null($spending)) {
@@ -99,9 +102,9 @@ class SpendingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(CreateData $request, int $id)
+    public function update(CreateData $request, Spending $spending)
     {
-        $record = Auth::user()->spending()->find($id);
+        // $record = Auth::user()->spending()->find($id);
 
         $record->amount = $request->amount;
         $record->date = $request->date;
@@ -119,12 +122,10 @@ class SpendingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Spending $spending)
     {
-
         // $record = Auth::user()->spending()->find($id);
-        $record = Auth::user()->spending()->find($id);
-        $record->delete();
+        $spending->delete();
 
         // フラッシュメッセージ
         return redirect('/')->with('status', '支出の削除');
