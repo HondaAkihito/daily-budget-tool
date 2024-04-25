@@ -7,7 +7,7 @@
         <form action="{{ route('profile.update', ['profile' => $user['id']]) }}" method="post" enctype="multipart/form-data">
         @csrf
         @method('PATCH')
-            <label for="id">↓ファイルを選択してください↓</label><br>
+            <label for="file">↓ファイルを選択してください↓</label><br>
             <input type="file" id="input" name="file" class="cursor_pointer">
             <!-- バリデーション個別表示 -->
             @error('file')

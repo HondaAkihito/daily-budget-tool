@@ -56,7 +56,8 @@ return [
         'string' => 'The :attribute must be greater than or equal :value characters.',
         'array' => 'The :attribute must have :value items or more.',
     ],
-    'image' => 'The :attribute must be an image.',
+    // 'image' => 'The :attribute must be an image.',
+    'image' => '「:attribute」は画像にしてください。',
     'in' => 'The selected :attribute is invalid.',
     'in_array' => 'The :attribute field does not exist in :other.',
     'integer' => 'The :attribute must be an integer.',
@@ -77,12 +78,14 @@ return [
         'array' => 'The :attribute must not have more than :value items.',
     ],
     'max' => [
-        'numeric' => 'The :attribute may not be greater than :max.',
+        // 'numeric' => 'The :attribute may not be greater than :max.',
+        'numeric' => '「:attribute 」は「:max(11桁)」を超えることはできません。',
         'file' => 'The :attribute may not be greater than :max kilobytes.',
         'string' => 'The :attribute may not be greater than :max characters.',
         'array' => 'The :attribute may not have more than :max items.',
     ],
-    'mimes' => 'The :attribute must be a file of type: :values.',
+    // 'mimes' => 'The :attribute must be a file of type: :values.',
+    'mimes' => '「:attribute」は次の拡張子である必要があります: :values.',
     'mimetypes' => 'The :attribute must be a file of type: :values.',
     'min' => [
         'numeric' => 'The :attribute must be at least :min.',
@@ -96,7 +99,8 @@ return [
     'password' => 'The password is incorrect.',
     'present' => 'The :attribute field must be present.',
     'regex' => 'The :attribute format is invalid.',
-    'required' => 'The :attribute field is required.',
+    // 'required' => 'The :attribute field is required.',
+    'required' => '「:attribute」は必須項目です。',
     'required_if' => 'The :attribute field is required when :other is :value.',
     'required_unless' => 'The :attribute field is required unless :other is in :values.',
     'required_with' => 'The :attribute field is required when :values is present.',
@@ -114,7 +118,8 @@ return [
     'string' => 'The :attribute must be a string.',
     'timezone' => 'The :attribute must be a valid zone.',
     'unique' => 'The :attribute has already been taken.',
-    'uploaded' => 'The :attribute failed to upload.',
+    // 'uploaded' => 'The :attribute failed to upload.',
+    'uploaded' => '「:attribute」アップロードに失敗しました。(サイズが大きいかもしれません)',
     'url' => 'The :attribute format is invalid.',
     'uuid' => 'The :attribute must be a valid UUID.',
 
@@ -149,6 +154,10 @@ return [
     'attributes' => [
         'email'=>'メールアドレス',
         'password'=>'パスワード',
+        'amount'=>'金額',
+        'title'=>'タイトル',
+        'date'=>'日付',
+        'file'=>'ファイル',
     ],
 
 ];

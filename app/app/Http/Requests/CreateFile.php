@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateData extends FormRequest
+class CreateFile extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,9 +24,7 @@ class CreateData extends FormRequest
     public function rules()
     {
         return [
-            'amount' => 'required|integer|max:99999999999',
-            'title' => 'required|max:20',
-            'date' => 'required|date',
+            'file' => 'required|file|mimes:jpeg,png,jpg,webp|max:2048',
         ];
     }
 }
