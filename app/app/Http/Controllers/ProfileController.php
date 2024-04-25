@@ -65,8 +65,19 @@ class ProfileController extends Controller
      */
     public function edit(int $id)
     {
+        $user = '';
+
         // 編集ページへ
-        $user = Auth::user();
+        if( Auth::id() == $id ) {
+            $user = Auth::user();
+
+        // 認証されていないユーザー情報の場合
+        } elseif( User::find($id) ) {
+            abort(403);
+        // DBに情報すらない場合
+        } else {
+            abort(404);
+        }
 
         return view('original.profile.edit', [
             'user' => $user,
