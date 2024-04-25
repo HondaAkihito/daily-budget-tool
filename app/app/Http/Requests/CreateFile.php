@@ -24,7 +24,7 @@ class CreateFile extends FormRequest
     public function rules()
     {
         return [
-            'file' => 'required|file|mimes:jpeg,png,jpg,webp|max:2048',
+            'file' => 'required|file|mimes:jpeg,png,jpg,webp',
         ];
     }
 }
