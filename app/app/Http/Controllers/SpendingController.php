@@ -65,10 +65,11 @@ class SpendingController extends Controller
         // user所持か否かはポリシークラスで判別
         // $spending = Auth::user()->spending()->find($id);
 
+        // ポリシークラスでは不要
         // URLでユーザーが所持しないidを入力された時に表示
-        if(is_null($spending)) {
-            abort(404);
-        }
+        // if(is_null($spending)) {
+        //     abort(404);
+        // }
 
         return view('original.spending.show', [
             'spending' => $spending,
@@ -86,9 +87,9 @@ class SpendingController extends Controller
         // $spending = Auth::user()->spending()->find($id);
 
         // URLでユーザーが所持しないidを入力された時に表示
-        if(is_null($spending)) {
-            abort(404);
-        }
+        // if(is_null($spending)) {
+        //     abort(404);
+        // }
 
         return view('original.spending.edit', [
             'spending' => $spending,
