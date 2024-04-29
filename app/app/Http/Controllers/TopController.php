@@ -81,7 +81,8 @@ class TopController extends Controller
         
         // 支出テーブルに値がある場合
         if(Auth::user()->spending()->exists()) {
-            $spendings = Auth::user()->spending()->orderBy('date', 'DESC')->get();
+            // $spendings = Auth::user()->spending()->orderBy('date', 'DESC')->get();
+            $spendings = Auth::user()->spending()->orderBy('date', 'DESC')->paginate(10);
         }
 
 

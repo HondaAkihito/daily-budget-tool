@@ -79,6 +79,7 @@
                     </tr>
                 @endforeach
                 </tbody>
+                {{ $spendings->links() }}
             @endif
         </table>
     </section>
