@@ -105,16 +105,17 @@ class SpendingController extends Controller
      */
     public function update(CreateData $request, Spending $spending)
     {
-        // $record = Auth::user()->spending()->find($id);
+        $record = $spending;
 
-        $record->amount = $request->amount;
-        $record->date = $request->date;
-        $record->title = $request->title;
+        $columns = ['amount', 'date', 'title'];
+        foreach($columns as $column) {
+            $record->$column = $request->$column;
+        }
         
         Auth::user()->spending()->save($record);
 
         // with = フラッシュメッセージも
-        return redirect()->route('spending.show', ['spending' =>  $id])->with('status', '支出の更新');
+        return redirect()->route('spending.show', ['spending' =>  $record->id])->with('status', '支出の更新');
     }
 
     /**
