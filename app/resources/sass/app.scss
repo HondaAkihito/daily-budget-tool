@@ -215,6 +215,12 @@ h2 {
   }
 }
 
+// dateボタンがiPhoneで見たときに少し下がるのを防ぐ
+input[type="date"] {
+  vertical-align: middle;
+  margin-top: 0; 
+}
+
 // ----- マイページ
 // リセット、ログアウト
 .inline-block {
