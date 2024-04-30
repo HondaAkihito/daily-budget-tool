@@ -4,18 +4,6 @@
 <section class="container">
     <h2 class="mt-5 text-center">支出登録</h2>
 
-    <div class="pandel-body">
-        @if($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach($errors->all() as $messsage)
-                <li>{{ $messsage }}</li>
-                @endforeach
-            </ul>
-        </div>
-        @endif
-    </div>
-
     <form action="{{ route('spending.store') }}" method="post" class="mt-5 date_option">
         @csrf
         <div class="form-group">
