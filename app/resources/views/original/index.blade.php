@@ -66,7 +66,7 @@
                     <th scope="col" class="text-center align-middle w-25"></th>
                 </tr>
             </thead>
-            @if(Auth::user()->budget()->exists())
+            @if(Auth::user()->spending()->exists())
                 <tbody id="gallery">
                 @foreach ($spendings as $spending)
                     <tr class="card-body bg-white gallery">
