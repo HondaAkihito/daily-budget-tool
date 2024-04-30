@@ -97,7 +97,7 @@ class SearchController extends Controller
             $from = $request['from'];
             $until = $request['until'];
             
-            $spendings = Auth::user()->spending()->wherebetween('date', [$from, $until])->get();
+            $spendings = Auth::user()->spending()->wherebetween('date', [$from, $until])->orderBy('date', 'DESC')->get();
 
             // from 選択された場合
         } elseif ($request['from']) {
@@ -114,7 +114,6 @@ class SearchController extends Controller
             $spendings = Auth::user()->spending()->orderBy('date', 'DESC')->get();
         }
         // 期間検索で参考にしたサイト：https://qiita.com/namizatork/items/9dd58f1731aa943c9add
-
 
         // ---------- 共通処理 ----------
         // ----- リターン -----
