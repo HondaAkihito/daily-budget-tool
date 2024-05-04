@@ -25,17 +25,19 @@
     </div>
 
     <!-- オールリセット -->
-    <form class="inline-block" action="{{ route('profile.destroy', ['profile' => $user['id']])}}" method="POST">
-        @csrf
-        @method('DELETE')
-        <button type="submit" class="btn btn-danger mt-4" onclick="return confirm('予算/支出内容を全てリセットしても良いですか？');">予算/支出をリセット</button>
-    </form>
+    @if(Auth::user()->budget()->exists())
+        <form class="inline-block" action="{{ route('profile.destroy', ['profile' => $user['id']])}}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger mt-4 mr-3" onclick="return confirm('予算/支出内容を全てリセットしても良いですか？');">予算/支出をリセット</button>
+        </form>
+    @endif
     
     <!-- ログアウト -->
     @if(Auth::check())
         <form class="inline-block" id="logout-form" action="{{ route('logout')}}" method="POST">
             @csrf
-            <button type="submit" class="btn btn-dark mt-4 ml-3">ログアウト</button>
+            <button type="submit" class="btn btn-dark mt-4">ログアウト</button>
         </form>
     @endif
 

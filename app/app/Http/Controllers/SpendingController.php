@@ -28,7 +28,14 @@ class SpendingController extends Controller
      */
     public function create()
     {
-        return view('original.spending.create');
+        // 予算テーブルに情報がるかどうか判別
+        if(Auth::user()->budget()->exists()) {
+            // 情報がある場合
+            return view('original.spending.create');
+        } else {
+            // 情報がない場合
+            return redirect()->route('budget.create');
+        }
     }
 
     /**

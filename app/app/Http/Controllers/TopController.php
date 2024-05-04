@@ -19,6 +19,12 @@ class TopController extends Controller
      */
     public function index()
     {
+        // 予算テーブルに情報がない場合(予算登録がまだの場合)
+        if(Auth::user()->budget()->exists()) {
+        } else {
+            return view('original.budget.redirect');
+        }
+
 
         // ---------- 予算一覧表示 ----------
         // 空を用意することで「 共通処理①」で値がなくてもエラーにならない
