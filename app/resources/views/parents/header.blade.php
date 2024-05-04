@@ -10,7 +10,9 @@
             @else
                 <div class="header-right pc_tab">
                     <a class="btn btn-success ml-1 d-flex align-items-center" href="{{ route('index') }}">予算</a>
-                    <a class="btn btn-success ml-1 d-flex align-items-center" href="{{ route('budget.create') }}">予算登録</a>
+                    @if(Auth::user()->budget()->doesntExist())
+                        <a class="btn btn-success ml-1 d-flex align-items-center" href="{{ route('budget.create') }}">予算登録</a>
+                    @endif
                     <a class="btn btn-success ml-1 d-flex align-items-center" href="{{ route('spending.create') }}">支出登録</a>
                     <div class="profile-picture profile-picture-header ml-1">
                         <a href="{{ route('profile.index') }}">
@@ -37,9 +39,11 @@
                             <li class="nav-item dropdown">
                                 <a class="btn btn-success" href="{{ route('index') }}">予算</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="btn btn-success ml-1" href="{{ route('budget.create') }}">予算登録</a>
-                            </li>
+                            @if(Auth::user()->budget()->doesntExist())
+                                <li class="nav-item dropdown">
+                                    <a class="btn btn-success ml-1" href="{{ route('budget.create') }}">予算登録</a>
+                                </li>
+                            @endif
                             <li class="nav-item dropdown">
                                 <a class="btn btn-success ml-1" href="{{ route('spending.create') }}">支出登録</a>
                             </li>
