@@ -17,6 +17,9 @@ $margin_5: 2rem;
 $inherit: inherit;
 $pointer: pointer;
 $inline-block: inline-block;
+$height40: 40px;
+$height30: 30px;
+
 // -----
 
 // ----- body
@@ -101,12 +104,12 @@ h2 {
   // ヘッダーアイコン
   &.profile-picture-header {
     width: 40px;
-    height: 40px;
+    height: $height40;
     vertical-align: middle;
     // display: inline-block;
     @media screen and (max-width: 430px) {
       width: 30px;
-      height: 30px;
+      height: $height40;
     }
   }
   
@@ -231,4 +234,15 @@ input[type="date"] {
 // ファイルアップロードにカーソル追加
 input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
   cursor: $pointer;
+}
+
+// ----- 予算登録リダイレクトページ
+// ボタンaタグ
+.budget-redirect-a {
+  height: $height40;
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 430px) {
+    height: $height30;
+  }
 }
