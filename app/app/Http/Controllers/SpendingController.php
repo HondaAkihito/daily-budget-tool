@@ -34,7 +34,7 @@ class SpendingController extends Controller
             return view('original.spending.create');
         } else {
             // 情報がない場合
-            return redirect()->route('budget.create');
+            return view('original.budget.redirect');
         }
     }
 
