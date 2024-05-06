@@ -14,7 +14,7 @@ class AddUserTable1columns extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->date('last_login_at')->nullable()->after('updated_at');
+            $table->dateTime('last_login_at')->nullable()->after('updated_at');
         });
     }
 
