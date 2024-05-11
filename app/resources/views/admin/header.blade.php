@@ -6,7 +6,7 @@
             <div class="header-right pc_tab">
                 <form method="post" action="{{ url('admin/logout') }}">
                     @csrf
-                    <input class="btn btn-danger" type="submit" value="ログアウト" />
+                    <input class="btn btn-dark" type="submit" value="ログアウト" />
                 </form>
             </div>
         </nav>

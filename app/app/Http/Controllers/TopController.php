@@ -94,7 +94,8 @@ class TopController extends Controller
 
         // ---------- 共通処理① ----------
         // ----- リターン -----
-        return view('original.index', [
+        // return view('original.index', [
+        return view('admin.index', [
             // 予算テーブルのレコード1件
             'budget' => $budget,
             // 支出テーブルのユーザーの値全て
